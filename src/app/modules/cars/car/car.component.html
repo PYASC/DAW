@@ -1,0 +1,26 @@
+<div class="container">
+    <h1 class="title">
+      Car Details
+    </h1>
+  
+    <mat-card 
+    [ngClass]="{
+      'card' : true,
+      'favorite': isFavorite
+      }">
+      <p class="details">
+        License Plate: {{ car.licensePlate }}
+      </p>
+      <p class="details">
+        Price per day: {{ car.rentPricePerDay }}
+      </p>
+      <p class="details">
+        Id: {{ car.id }}
+      </p>
+      <p class="details" *ngIf="car.modelName">
+        Model: {{ car.modelName }}
+      </p>
+    </mat-card>
+
+    <app-brand class="innerComp" *ngIf="car.brandID" [brandId]="car.brandID"  (favoriteStatus)="receiveStatus($event)"></app-brand>
+  </div>

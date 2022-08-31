@@ -1,0 +1,28 @@
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.form-section {
+    width: 60%;
+    height: 100%;
+    background-color:  rgb(255, 255, 255);
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    color: #000000;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.mat-form-field {
+    width: 100%;
+}
+.demo-button{
+    width: 100px;
+    height: 40px;
+    margin-bottom: 10px;
+}

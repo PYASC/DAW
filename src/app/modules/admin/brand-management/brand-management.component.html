@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="form-section">
+        <h1 class="title">
+            Add Brand
+        </h1>
+        <form [formGroup]="brandForm" class="form">
+            <mat-form-field appearance="outline">
+                <mat-label>Brand Name</mat-label>
+                <input matInput required placeholder="brand name" formControlName="name">
+            </mat-form-field>
+            
+            <mat-form-field appearance="outline">
+                <mat-label>Date Founded</mat-label>
+                <input matInput required placeholder="1900-07-22" formControlName="dateFounded">
+            </mat-form-field>
+        </form>
+      
+      
+      <button mat-raised-button (click)="addBrand()" class="demo-button" >
+        Add Brand
+      </button>
+      
+    </div>
+</div>

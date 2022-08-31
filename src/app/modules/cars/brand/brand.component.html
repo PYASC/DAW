@@ -1,0 +1,12 @@
+<mat-card class="card">
+  <h2>
+    Brand details
+  </h2>
+    <p class="details">
+      Brand Name: {{ brand.name }}
+    </p>
+    <p class="details">
+      Date Founded: {{ brand.dateFounded ?? "" | dateOnly }}
+    </p>
+    <mat-icon (click)="toggleFavorite()">{{icon}}</mat-icon>
+</mat-card>

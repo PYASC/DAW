@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="form-section">
+        <h1 class="title">
+            Add Car
+        </h1>
+        <form [formGroup]="carForm" class="form">
+            <mat-form-field appearance="outline">
+                <mat-label>License Plate</mat-label>
+                <input matInput required placeholder="B 00 BBB" formControlName="licensePlate">
+            </mat-form-field>
+            
+            <mat-form-field appearance="outline">
+                <mat-label>Price per Day</mat-label>
+                <input matInput type="number" required placeholder="45" formControlName="price">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" *ngIf="models.length>0">
+                <mat-label>Model</mat-label>
+                <mat-select [(value)]="selectedModel" name="brand">
+                  <mat-option *ngFor="let model of models" [value]="model.id">
+                    {{model.modelName}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </form>
+      
+      
+      <button mat-raised-button (click)="addCar()" class="demo-button" [disabled]="selectedModel === 0">
+        Add Car
+      </button>
+      
+    </div>
+</div>
